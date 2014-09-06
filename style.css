@@ -28,14 +28,14 @@ body{
   height: 50px;
   width: 250px;
   color:#4b4e4d !important;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
 ::-webkit-input-placeholder {
   color: #4b4e4d !important;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
