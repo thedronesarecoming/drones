@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <script src="countdown_v5.0/countdown.js"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+    <div class="col-md-3"> </div>
+    <div class="col-md-6" id="timer">
+      <script>
+      var divHeight = window.innerHeight/3;
+      var divWidth = divHeight*.4988*6;
+      console.log(divHeight);
+      console.log(divWidth);
+      //var divHeight = document.getElementById('timer').clientHeight;
+      var myCountdown1 = new Countdown({year: (new Date().getFullYear() +1),
+                                        month:1,
+                                        day:1,
+                                        width:divWidth,
+                                        height:divHeight,
+                                        style: "flip",
+                                        rangeHi:"day",
+                                        rangeLo:"minute",
+                                        hideLabels: true});
+      document.getElementById('Stage_jbeeb_3').style.margin="auto";
+      </script>
+
+    </div>
+    <div class="col-md-3"> </div>
+
+    </div>
+    <div class="row-fluid">
+      <div class="col-md-5"> </div>
+      <div class="col-md-2 email">
+        <form role="form">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="EMAIL LANDS HERE">
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-5"> </div>
+
+    </div>
+  </div>
+</body>
+</html>
