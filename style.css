@@ -4,8 +4,13 @@
 }
 
 body{
-  background-color: #df5431;
   height: 100%;
+  /*background-image:url('thedronesarecomingbg.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  background-color: #df5431;
   background: -webkit-radial-gradient(#df5431, #df5431, #ae452b); /* Safari 5.1 to 6.0 */
   background: -o-radial-gradient(#df5431, #ae452b); /* For Opera 11.6 to 12.0 */
   background: -moz-radial-gradient(#df5431, #ae452b); /* For Firefox 3.6 to 15 */
