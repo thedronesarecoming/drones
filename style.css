@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'RedOctober';
+  src: url('RedOctober.ttf') format('truetype');
+}
+
 body{
   background-color: #df5431;
   height: 100%;
@@ -26,8 +31,9 @@ body{
   border: 1px solid #767877;
   border-radius: 0px;
   height: 50px;
-  width: 250px;
+  width: 350px;
   color:#4b4e4d !important;
+  font-family: 'RedOctober'; 
   font-size: 18px;
 }
 
