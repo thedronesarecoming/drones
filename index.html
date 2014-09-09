@@ -5,6 +5,32 @@
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   <script src="countdown_v5.0/countdown.js"></script>
   <script src="jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+      $( document ).ready(function() {
+          $('#emailForm').submit(function(e) {
+
+          var url = "http://forms.brace.io/nick@gradf.ly"; 
+
+          $.ajax({
+                 type: "POST",
+                 url: url,
+                 data: $("#emailForm").serialize(), // serializes the form's elements.
+                 success: function(data)
+                 {
+                    console.log("success");
+                 },
+                 error: function(jqXHR, textStatus, errorThrown)
+                 {
+                    console.log("error");
+                 }
+
+               });
+
+          return false; // avoid to execute the actual submit of the form.
+      });
+    });
+  </script>
   
 </head>
 
@@ -29,31 +55,6 @@
                                         hideLabels: true});
       document.getElementById('Stage_jbeeb_3').style.margin="auto";
       </script>
-
-
-  <script type="text/javascript">
-    document.getElementById('emailForm').submit(function(e) {
-
-      var url = "http://forms.brace.io/nick@gradf.ly"; 
-
-      $.ajax({
-             type: "POST",
-             url: url,
-             data: $("#emailForm").serialize(), // serializes the form's elements.
-             success: function(data)
-             {
-                console.log("success");
-             },
-             error: function(jqXHR, textStatus, errorThrown)
-             {
-                console.log("error");
-             }
-
-           });
-
-      return false; // avoid to execute the actual submit of the form.
-  });
-  </script>
 
     </div>
     <div class="col-md-3"> </div>
