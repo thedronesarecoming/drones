@@ -16,7 +16,7 @@
                  type: "POST",
                  url: url,
                  data: $("#emailForm").serialize(), // serializes the form's elements.
-                 dataType: 'jsonp',
+                 crossDomain: true,
                  success: function(data)
                  {
                     console.log("success");
