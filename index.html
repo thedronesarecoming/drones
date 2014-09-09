@@ -27,6 +27,9 @@
                  }
 
                });
+          
+          $('#emailForm').css('display', 'none');
+          $('#successNotification').css('display', '');
 
           return false; // avoid to execute the actual submit of the form.
       });
@@ -71,6 +74,9 @@
             <input type="submit">
           </div>
         </form>
+        <div id="successNotification" style="display:none">
+          <p> Thank you. You will be notified upon landing. </p>
+        </div>
 
       </div>
       <div class="col-md-5"> </div>
