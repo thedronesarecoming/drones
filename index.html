@@ -4,6 +4,25 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   <script src="countdown_v5.0/countdown.js"></script>
+  <script src="jquery-1.11.1.min.js"></script>
+  <script>
+    $("#emailForm").submit(function() {
+
+      var url = "http://forms.brace.io/nick@gradf.ly"; 
+
+      $.ajax({
+             type: "POST",
+             url: url,
+             data: $("#emailForm").serialize(), // serializes the form's elements.
+             success: function(data)
+             {
+                 alert(data);
+             }
+           });
+
+      return false; // avoid to execute the actual submit of the form.
+  });
+  </script>
 
 </head>
 
@@ -29,6 +48,8 @@
       document.getElementById('Stage_jbeeb_3').style.margin="auto";
       </script>
 
+
+
     </div>
     <div class="col-md-3"> </div>
 
@@ -36,9 +57,11 @@
     <div class="row-fluid">
       <div class="col-md-5"> </div>
       <div class="col-md-2 email">
-        <form role="form">
+        <form id="emailForm" role="form" method="POST" action="http://forms.brace.io/nick@gradf.ly">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="BE NOTIFIED UPON LANDING">
+            <input style="text-align:center" type="email" class="form-control" name="_replyto" placeholder="BE NOTIFIED UPON LANDING">
+            <br>
+            <input type="submit">
           </div>
         </form>
 
