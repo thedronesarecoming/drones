@@ -6,7 +6,7 @@
   <script src="countdown_v5.0/countdown.js"></script>
   <script src="jquery-1.11.1.min.js"></script>
   <script>
-    $("#emailForm").submit(function() {
+    $("#emailForm").submit(function(e) {
 
       var url = "http://forms.brace.io/nick@gradf.ly"; 
 
@@ -16,8 +16,15 @@
              data: $("#emailForm").serialize(), // serializes the form's elements.
              success: function(data)
              {
-                 alert(data);
+                console.log("success");
+             },
+             error: function(jqXHR, textStatus, errorThrown)
+             {
+                console.log("error");
              }
+             e.preventDefault();
+             e.unbind();
+
            });
 
       return false; // avoid to execute the actual submit of the form.
@@ -59,7 +66,7 @@
       <div class="col-md-2 email">
         <form id="emailForm" role="form">
           <div class="form-group">
-            <input style="text-align:center" type="email" class="form-control" name="_replyto" placeholder="BE NOTIFIED UPON LANDING">
+            <input style="text-align:center" type="email" class="form-control" name="email" placeholder="BE NOTIFIED UPON LANDING">
             <br>
             <input type="submit">
           </div>
