@@ -11,6 +11,7 @@
           $('#emailForm').submit(function(e) {
 
           var url = "https://www.gradfly.co/drones?email=" + $("#emailForm").val(); 
+          console.log(url);
 
           $.ajax({
                  type: "GET",
