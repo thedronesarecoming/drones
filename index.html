@@ -10,12 +10,14 @@
       $( document ).ready(function() {
           $('#emailForm').submit(function(e) {
 
-          var url = "https://www.gradfly.co/drones?email=" + $("#emailForm").val(); 
+          var url = "https://www.gradfly.co/drones";
           console.log(url);
 
           $.ajax({
                  type: "GET",
                  url: url,
+                 data: $("#emailForm").serialize(),
+                 crossDomain: true,
                  success: function(data)
                  {
                     console.log("success");
