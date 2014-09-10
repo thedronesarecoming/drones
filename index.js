@@ -9,7 +9,7 @@ app.set("view options", {layout: false});
 app.use(express.static(__dirname + '/views'));
 
 app.get('/', function(request, response) {
-  response.sendfile('/views/index.html');
+  response.sendfile(__dirname + '/views/index.html');
 })
 
 app.listen(app.get('port'), function() {
