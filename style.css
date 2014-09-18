@@ -42,6 +42,11 @@ body{
   font-size: 18px;
 }
 
+p {
+  font-family: 'RedOctober';
+  font-size: 25px;
+}
+
 
 ::-webkit-input-placeholder {
   color: #4b4e4d !important;

@@ -14,6 +14,39 @@
 	ga('send', 'pageview');
 
   </script>
+  <script src="jquery-1.11.1.min.js"></script>
+
+  <script type="text/javascript">
+      $( document ).ready(function() {
+          $('#emailForm').submit(function(e) {
+
+          var url = "https://www.gradfly.co/drones";
+          console.log(url);
+
+          $.ajax({
+                 type: "GET",
+                 url: url,
+                 data: $("#emailForm").serialize(),
+                 crossDomain: true,
+                 success: function(data)
+                 {
+                    console.log("success");
+                 },
+                 error: function(jqXHR, textStatus, errorThrown)
+                 {
+                    console.log("error");
+                 }
+
+               });
+
+          $('#emailForm').css('display', 'none');
+          $('#successNotification').css('display', '');
+
+          return false; // avoid to execute the actual submit of the form.
+      });
+    });
+  </script>
+  
 </head>
 
 <body>
@@ -45,11 +78,17 @@
     <div class="row-fluid">
       <div class="col-md-5"> </div>
       <div class="col-md-2 email">
-        <form role="form">
+        <form id="emailForm" role="form">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="BE NOTIFIED UPON LANDING">
+            <input style="text-align:center" type="email" class="form-control" name="email" placeholder="BE NOTIFIED UPON LANDING">
+            <br>
+            <input type="submit">
           </div>
         </form>
+        <div id="successNotification" style="display:none">
+          <br>
+          <p> Thank you. You will be notified upon landing. </p>
+        </div>
 
       </div>
       <div class="col-md-5"> </div>
