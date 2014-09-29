@@ -15,7 +15,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-  background-color: #df5431;
+  background-color: #fff;
   background: -webkit-radial-gradient(#df5431, #df5431, #ae452b); /* Safari 5.1 to 6.0 */
   background: -o-radial-gradient(#df5431, #ae452b); /* For Opera 11.6 to 12.0 */
   background: -moz-radial-gradient(#df5431, #ae452b); /* For Firefox 3.6 to 15 */
@@ -186,17 +186,24 @@ p {
   text-align: center;
   padding: 40px 20px;
   border-bottom: 5px solid #231f20;
+  background-color: #221f1f;
+  /*background-color: #df5431;*/
 }
 
 #header-tagline h1 {
   font-size: 38px;
   margin: 0 20px 0 20px;
+  color: #df5431;
 }
 
 #header-tagline h2 {
   font-size: 32px;
   margin: 0 20px 0 20px;
   color: #fff;
+}
+
+#information {
+  background-color: #df5431;
 }
 
 #information [class*=col] {
