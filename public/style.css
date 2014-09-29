@@ -114,14 +114,14 @@ p {
   background: url(images/the.png);
   background-size: cover;
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: 10px;
 }
 
 #header-title .text {
   display: inline-block;
   position: absolute;
-  left: 30px;
+  left: 50px;
   z-index: 200;
 }
 
@@ -228,4 +228,21 @@ a.large {
 
 #registration-link {
   margin: 60px 0;
+}
+
+footer {
+  padding: 40px;
+  background: #fff;
+}
+
+footer p {
+  display: inline-block;
+  margin: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+  color: #c0c0c0;
+}
+
+footer img {
+  width: 140px;
 }
