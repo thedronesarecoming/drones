@@ -1,89 +1,48 @@
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="analytics.js"></script>
+  </head>
+  <body>
 
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-  <script src="countdown_v5.0/countdown.js"></script>
-  <script src="jquery-1.11.1.min.js"></script>
-
-  <script type="text/javascript">
-      $( document ).ready(function() {
-          $('#emailForm').submit(function(e) {
-
-          var url = "https://www.gradfly.co/drones";
-          console.log(url);
-
-          $.ajax({
-                 type: "GET",
-                 url: url,
-                 data: $("#emailForm").serialize(),
-                 crossDomain: true,
-                 success: function(data)
-                 {
-                    console.log("success");
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                    console.log("error");
-                 }
-
-               });
-
-          $('#emailForm').css('display', 'none');
-          $('#successNotification').css('display', '');
-
-          return false; // avoid to execute the actual submit of the form.
-      });
-    });
-  </script>
-  
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="row-fluid">
-    <div class="col-md-3"> </div>
-    <div class="col-md-6" id="timer">
-      <script>
-      var divHeight = window.innerHeight/3;
-      var divWidth = divHeight*.4988*8;
-      console.log(divHeight);
-      console.log(divWidth);
-      //var divHeight = document.getElementById('timer').clientHeight;
-      var myCountdown1 = new Countdown({year: (new Date().getFullYear() ),
-                                        month:9,
-                                        day:29,
-                                        width:divWidth,
-                                        height:divHeight,
-                                        style: "flip",
-                                        rangeHi:"day",
-                                        hideLabels: true});
-      document.getElementById('Stage_jbeeb_3').style.margin="auto";
-      </script>
-
-    </div>
-    <div class="col-md-3"> </div>
-
-    </div>
-    <div class="row-fluid">
-      <div class="col-md-5"> </div>
-      <div class="col-md-2 email">
-        <form id="emailForm" role="form">
-          <div class="form-group">
-            <input style="text-align:center" type="email" class="form-control" name="email" placeholder="BE NOTIFIED UPON LANDING">
-            <br>
-            <input type="submit">
-          </div>
-        </form>
-        <div id="successNotification" style="display:none">
-          <br>
-          <p> Thank you. You will be notified upon landing. </p>
-        </div>
-
+  <div class="row" id="header">
+    <div class="col-xs-2" id="header-title">
+      <div id="the"></div>
+      <div class="text">
+        <h1>drones</h1>
+        <p>are</p>
+        <h1>coming</h1>
       </div>
-      <div class="col-md-5"> </div>
-
+    </div>
+    <div class="col-xs-10" id="header-city">
+      <div class="curve"></div>
+      <div class="city front"></div>
+      <div class="city back-1"></div>
+      <div class="city back-2"></div>
+      <div class="city back-3"></div>
     </div>
   </div>
-</body>
+
+  <div class="row" id="header-tagline">
+    <div class="col-xs-12">
+      <h1>Create a drone. Show what you're made of.</h1>
+      <h2>register today for gradfly's drone contest</h2>
+    </div>
+  </div>
+  
+  <div class="row" id="information">
+    <div class="col-sm-6">
+      <h2><a href="https://www.gradfly.co">GradFly</a> is happy to announce the first ever Drones Are Coming contest! Assemble a team and build a drone that addresses a social/economic issue. Final projects will be judged by a panel of UB professors, Stem Professionals, executives, and the CEO of Gradfly. Sign up and show what you're made of!</h2>
+    </div>
+    <div class="col-sm-6" id="registration-link">
+      <center>
+      <a class="large" href="https://docs.google.com/forms/d/1CrrUB2akJ-RaP86UPSn9VD66ivjNzTBqzsIY-QhL_Z8/viewform">Click here to register!</a>
+      <h2>by registering you agree to the<br>contest <a href="/rules">rules and requirements</a></h2>
+      </center>
+    </div>
+  </div>
+
+  </body>
 </html>
