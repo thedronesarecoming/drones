@@ -4,7 +4,6 @@
 }
 
 * {
-  font-family: 'RedOctober';
   color: #231f20;
 }
 
@@ -77,6 +76,7 @@ p {
   min-height: 150px;
   height: 150px;
   background: #df5431;
+  font-family: 'RedOctober';
 }
 
 #header-title {
@@ -183,6 +183,7 @@ p {
   padding: 40px 20px;
   border-bottom: 5px solid #231f20;
   background-color: #221f1f;
+  font-family: 'RedOctober';
   /*background-color: #df5431;*/
 }
 
@@ -200,16 +201,17 @@ p {
 
 #information {
   background-color: #df5431;
+  font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 #information [class*=col] {
   padding: 20px 40px;
 }
 
-#information h1 {
+#information p {
   text-align: center;
   font-size: 20px;
-  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 #information h2 {
@@ -230,7 +232,17 @@ a.large {
 }
 
 #registration-link {
-  margin: 60px 0;
+  margin: 20px 0;
+}
+
+#registration-link a.large {
+  font-size: 44px;
+  font-weight: 600;
+}
+
+#registration-link h2 {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 footer {
